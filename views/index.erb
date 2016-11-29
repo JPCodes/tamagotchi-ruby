@@ -1,0 +1,26 @@
+<h1 class="jumbotron">Tamagochi</h1>
+
+<form class="" action="/tamagotchi-form" method="post">
+  <div class="form-group">
+    <label for="name">Tamagochi name:</label>
+    <input type="text" name="name" placeholder="Enter a name for your tamagotchi">
+    <button type="submit" name="button">submit</button>
+  </div>
+</form>
+<form action="/feed" method="post">
+  <button type="submit" name="button">feed</button>
+</form>
+<form action="/sleep" method="post">
+  <button type="submit" name="button">sleep</button>
+</form>
+<form action="/play" method="post">
+  <button type="submit" name="button">play</button>
+</form>
+
+<div class="output">
+  <h3> <%= @name %> Tamagotchi  </h3>
+  <h4> Food level:  <%= @food %></h4>
+  <h4> Sleep level:  <%= @sleep %></h4>
+  <h4> Activity level:  <%= @activity %></h4>
+
+</div>

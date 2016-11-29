@@ -6,12 +6,13 @@ class Tamagotchi
     @sleep_level = 20
     @activity_level = 20
     @birth = Time.now
-    every_so_many_seconds(1) do
-      @food_level -= 1
-      if !self.is_alive?
-        break
-      end
-    end
+
+    # every_so_many_seconds(1) do
+    #   @food_level -= 1
+    #   if !self.is_alive?
+    #     break
+    #   end
+    # end
 
   end
 
@@ -50,18 +51,6 @@ class Tamagotchi
     @food_level+=5
     @activity_level-=3
     @sleep_level-=3
-    #     Ingredients
-    # 1 pound salted cod fish
-    # 14 potatoes, sliced thick
-    # 2 onions, sliced
-    # 2 large cloves garlic, minced
-    # 1 (8 ounce) can tomato sauce
-    # 1/2 cup extra virgin olive oil
-    # 1 cup water
-    # Directions
-    # Soak the salted cod in about 2 quarts of water, changing the water 3 times over the course of 8 hours. Drain and cut the fish into bite-size pieces.
-    # Layer the half of each ingredient in the following order: potatoes, cod fish, onions, hard-boiled eggs, capers, garlic, olives (what olives?), roasted red peppers, and raisins. Place the bay leaf on top, then pour half the tomato sauce and half the olive oil. Repeat with the remaining ingredients in the same order. Pour the water and white wine on top. Do not stir.
-    # Cover and bring to a boil over medium heat. Reduce heat to medium-low and simmer until the potatoes are tender, about 30 minutes.
   end
 
   define_method(:play) do
@@ -70,7 +59,7 @@ class Tamagotchi
     @sleep_level-=3
   end
 
-  define_method(:sleep) do
+  define_method(:make_sleep) do
     @food_level-=5
     @activity_level-=4
     @sleep_level+=10
@@ -89,4 +78,4 @@ class Tamagotchi
 
 end
 #
-# a = Tamagotchi.new('diego')
+a = Tamagotchi.new('diego')
