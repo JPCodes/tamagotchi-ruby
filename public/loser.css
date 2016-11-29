@@ -1,0 +1,10 @@
+body {
+  background: url('https://media.giphy.com/media/1jARfPtdz7eE0/giphy.gif') no-repeat fixed center;
+  background-size: cover;
+  color: #fff;
+}
+
+h1 {
+    border: 3px solid red;
+    width: 40%;
+}

@@ -4,7 +4,8 @@
     <meta http-equiv="refresh" content="1">
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css">
   </head>
   <body>
@@ -23,9 +24,12 @@
 
       <div class="output">
         <h3> <%= @name %> Tamagotchi  </h3>
-        <h4> Food level:  <%= @food %></h4>
-        <h4> Sleep level:  <%= @sleep %></h4>
-        <h4> Activity level:  <%= @activity %></h4>
+        <h4> Food level:  </h4>
+        <progress class="progress progress-success" value= <%= @food %> max="30"></progress>
+        <h4> Sleep level:  </h4>
+        <progress class="progress progress-warning" value= <%= @sleep %> max="30"></progress>
+        <h4> Activity level:  </h4>
+        <progress class="progress progress-danger" value= <%= @activity %> max="30"></progress>
 
       </div>
 
