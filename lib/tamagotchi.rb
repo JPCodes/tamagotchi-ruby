@@ -7,13 +7,6 @@ class Tamagotchi
     @activity_level = 20
     @birth = Time.now
 
-    # every_so_many_seconds(1) do
-    #   @food_level -= 1
-    #   if !self.is_alive?
-    #     break
-    #   end
-    # end
-
   end
 
   define_method(:name) do
@@ -64,18 +57,4 @@ class Tamagotchi
     @activity_level-=4
     @sleep_level+=10
   end
-
-  def every_so_many_seconds(seconds)
-    last_tick = Time.now
-    loop do
-      sleep 0.1
-      if Time.now - last_tick >= seconds
-        last_tick += seconds
-        yield
-      end
-    end
-  end
-
 end
-#
-a = Tamagotchi.new('diego')
