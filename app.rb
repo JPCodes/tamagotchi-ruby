@@ -9,16 +9,16 @@ get('/') do
   erb(:index)
 end
 
-post('/tamagotchi-form') do
+get('/tamagotchi-form') do
   @name = params.fetch('name')
   $new_tamagotchi = Tamagotchi.new(@name)
   @food = $new_tamagotchi.food_level()
   @sleep = $new_tamagotchi.sleep_level()
   @activity = $new_tamagotchi.activity_level()
-  erb(:index)
+  erb(:game)
 end
 
-post('/feed') do
+get('/feed') do
   @name=$new_tamagotchi.name()
   $new_tamagotchi.feed()
   @food = $new_tamagotchi.food_level()
@@ -28,10 +28,10 @@ post('/feed') do
   if @food <= 0 or @sleep <= 0 or @activity <= 0
     erb(:failure)
   else
-    erb(:index)
+    erb(:game)
   end
 end
-post('/play') do
+get('/play') do
   @name=$new_tamagotchi.name()
   $new_tamagotchi.play()
   @food = $new_tamagotchi.food_level()
@@ -41,10 +41,10 @@ post('/play') do
   if @food <= 0 or @sleep <= 0 or @activity <= 0
     erb(:failure)
   else
-    erb(:index)
+    erb(:game)
   end
 end
-post('/sleep') do
+get('/sleep') do
   @name=$new_tamagotchi.name()
   $new_tamagotchi.make_sleep()
   @food = $new_tamagotchi.food_level()
@@ -54,6 +54,6 @@ post('/sleep') do
   if @food <= 0 or @sleep <= 0 or @activity <= 0
     erb(:failure)
   else
-    erb(:index)
+    erb(:game)
   end
 end

@@ -60,7 +60,7 @@ class Tamagotchi
   end
 
   define_method(:make_sleep) do
-    @food_level-=5
+    @food_level-=4
     @activity_level-=4
     @sleep_level+=10
   end

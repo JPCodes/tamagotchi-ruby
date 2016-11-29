@@ -1,26 +1,26 @@
-<h1 class="jumbotron">2 minute Tamagochi game</h1>
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- <meta http-equiv="refresh" content="3"> -->
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
 
-<form class="" action="/tamagotchi-form" method="post">
-  <div class="form-group">
-    <label for="name">Tamagochi name:</label>
-    <input type="text" name="name" placeholder="Enter a name for your tamagotchi">
-    <button type="submit" class="btn btn-info" name="button">submit</button>
-  </div>
-</form>
-<form action="/feed" method="post">
-  <button type="submit" class="btn btn-primary" name="button">feed</button>
-</form>
-<form action="/sleep" method="post">
-  <button type="submit" class="btn btn-danger" name="button">sleep</button>
-</form>
-<form action="/play" method="post">
-  <button type="submit" class="btn btn-success" name="button">play</button>
-</form>
+    <div class="container">
 
-<div class="output">
-  <h3> <%= @name %> Tamagotchi  </h3>
-  <h4> Food level:  <%= @food %></h4>
-  <h4> Sleep level:  <%= @sleep %></h4>
-  <h4> Activity level:  <%= @activity %></h4>
+      <h1 class="jumbotron">2 minute Tamagotchi game</h1>
+      <h2>Name your Tamagotchi!</h2>
 
-</div>
+      <form class="" action="/tamagotchi-form">
+        <div class="form-group">
+          <label for="name">Tamagotchi name:</label>
+          <input type="text" name="name" placeholder="Enter a name for your tamagotchi">
+          <button type="submit" class="btn btn-info" name="button">submit</button>
+        </div>
+      </form>
+
+    </div>
+  </body>
+</html>
