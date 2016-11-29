@@ -1,0 +1,26 @@
+body {
+  background: #718a8c;
+}
+
+.centerIt {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  }
+
+.jumbo {
+  border: 5px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.output {
+  color: #fff;
+}

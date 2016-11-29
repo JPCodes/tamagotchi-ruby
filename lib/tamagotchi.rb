@@ -6,7 +6,6 @@ class Tamagotchi
     @sleep_level = 20
     @activity_level = 20
     @birth = Time.now
-
   end
 
   define_method(:name) do

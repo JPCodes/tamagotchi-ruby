@@ -2,7 +2,6 @@ require('sinatra')
 require('sinatra/reloader')
 also_reload('./lib/**/*.rb')
 require('./lib/tamagotchi.rb')
-require('haml')
 
 
 get('/') do
@@ -19,7 +18,7 @@ get('/tamagotchi-form') do
 end
 
 get('/feed') do
-  @name=$new_tamagotchi.name()
+  @name = $new_tamagotchi.name()
   $new_tamagotchi.feed()
   @food = $new_tamagotchi.food_level()
   @sleep = $new_tamagotchi.sleep_level()
@@ -32,7 +31,7 @@ get('/feed') do
   end
 end
 get('/play') do
-  @name=$new_tamagotchi.name()
+  @name = $new_tamagotchi.name()
   $new_tamagotchi.play()
   @food = $new_tamagotchi.food_level()
   @sleep = $new_tamagotchi.sleep_level()
@@ -45,7 +44,7 @@ get('/play') do
   end
 end
 get('/sleep') do
-  @name=$new_tamagotchi.name()
+  @name = $new_tamagotchi.name()
   $new_tamagotchi.make_sleep()
   @food = $new_tamagotchi.food_level()
   @sleep = $new_tamagotchi.sleep_level()
