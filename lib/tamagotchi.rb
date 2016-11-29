@@ -52,23 +52,15 @@ class Tamagotchi
     @sleep_level-=3
     #     Ingredients
     # 1 pound salted cod fish
-    # 4 potatoes, sliced thick
+    # 14 potatoes, sliced thick
     # 2 onions, sliced
-    # 4 hard-boiled eggs, sliced
-    # 2 teaspoons capers
     # 2 large cloves garlic, minced
-    # 1/4 cup pitted green olives
-    #
-    # 1 (4 ounce) jar roasted red bell peppers, drained
-    # 1/2 cup golden raisins
-    # 1 bay leaf
     # 1 (8 ounce) can tomato sauce
     # 1/2 cup extra virgin olive oil
     # 1 cup water
-    # 1/4 cup white wine
     # Directions
     # Soak the salted cod in about 2 quarts of water, changing the water 3 times over the course of 8 hours. Drain and cut the fish into bite-size pieces.
-    # Layer the half of each ingredient in the following order: potatoes, cod fish, onions, hard-boiled eggs, capers, garlic, olives, roasted red peppers, and raisins. Place the bay leaf on top, then pour half the tomato sauce and half the olive oil. Repeat with the remaining ingredients in the same order. Pour the water and white wine on top. Do not stir.
+    # Layer the half of each ingredient in the following order: potatoes, cod fish, onions, hard-boiled eggs, capers, garlic, olives (what olives?), roasted red peppers, and raisins. Place the bay leaf on top, then pour half the tomato sauce and half the olive oil. Repeat with the remaining ingredients in the same order. Pour the water and white wine on top. Do not stir.
     # Cover and bring to a boil over medium heat. Reduce heat to medium-low and simmer until the potatoes are tender, about 30 minutes.
   end
 
