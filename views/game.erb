@@ -11,25 +11,47 @@
   <body>
 
     <div class="centerIt">
-      <h1 class="jumbo">2 minute Tamagotchi game</h1>
+      <h1 class="jumbo">2 minute Tamagotchi game</h1><br>
+      <% if @food <21 %>
       <form action="/feed">
         <button type="submit" class="btn btn-primary form-control" name="button">Feed</button>
       </form>
+      <% else %>
+        <span class="status1">Status: Hungry, go away!</span>
+      <form action="/feed">
+        <button type="submit" class="btn btn-primary form-control" disabled name="button">Feed</button>
+      </form>
+      <% end %>
+      <% if @sleep <21 %>
       <form action="/sleep">
-        <button type="submit" class="btn btn-danger form-control" name="button">Sleep</button>
+        <button type="submit" class="btn btn-danger form-control"  name="button">Sleep</button>
       </form>
+      <% else %>
+      <form action="/sleep">
+        <span class="status2">Status: Sleepy, go away!</span>
+        <button type="submit" class="btn btn-danger form-control" disabled name="button">Sleep</button>
+      </form>
+      <% end %>
+      <% if @activity <21 %>
       <form action="/play">
-        <button type="submit" class="btn btn-success form-control" name="button">Play</button>
+        <button type="submit" class="btn btn-success form-control"  name="button">Play</button>
       </form>
+      <% else %>
+      <span class="status3">Status: Tired, go away!</span>
+      <form action="/play">
+        <button type="submit" class="btn btn-success form-control" disabled name="button">Play</button>
+      </form>
+      <% end %>
 
       <div class="output">
-        <h3> <%= @name %> Tamagotchi  </h3>
+        <br>
+        <h3> <center> <%= @name %> Tamagotchi</center>  </h3>
         <h4> Food level:  </h4>
-        <progress class="progress progress-success" value= <%= @food %> max="30"></progress>
+        <progress class="progress progress-primary" value= <%= @food %> max="30"></progress>
         <h4> Sleep level:  </h4>
-        <progress class="progress progress-warning" value= <%= @sleep %> max="30"></progress>
+        <progress class="progress progress-danger" value= <%= @sleep %> max="30"></progress>
         <h4> Activity level:  </h4>
-        <progress class="progress progress-danger" value= <%= @activity %> max="30"></progress>
+        <progress class="progress progress-success" value= <%= @activity %> max="30"></progress>
 
       </div>
 

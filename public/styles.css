@@ -25,3 +25,24 @@ body {
 .output {
   color: #fff;
 }
+
+.status1{
+  position: absolute;
+  left: 650px;
+  width: 35%;
+  float: right;
+}
+.status2{
+  position: absolute;
+  left: 650px;
+  top: 20px;
+  width: 35%;
+  float: right;
+}
+.status3{
+  position: absolute;
+  left: 650px;
+  top: 40px;
+  width: 35%;
+  float: right;
+}
